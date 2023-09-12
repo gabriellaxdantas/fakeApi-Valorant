@@ -1,0 +1,38 @@
+.container-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 30px 0px 0px 0px;
+}
+
+.img-menu > img{
+  width: 80px;
+  height: 80px;
+}
+.title-menu > h1{
+  font-size: 50px;
+}
+
+.title-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.title-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.title-menu:hover::after {
+  width: 100%;
+}
