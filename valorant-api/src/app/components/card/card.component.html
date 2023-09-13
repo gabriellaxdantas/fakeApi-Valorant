@@ -1,19 +1,18 @@
-<div class="container-card">
-  <div class="box-card">
+<div class="container-card" *ngFor="let agente of agentesValorant">
+  <div class="box-card" >
+
     <div class="title-card">
-      <h1>Reyna</h1>
+      <h1>{{agente.name}}</h1>
     </div>
     <div class="img-card">
-      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c129aab8-0fed-4d3e-8c10-3fc467fb661b/ddyjdmr-b48faa53-4620-4de8-a2f9-77f168cc1ea6.png/v1/fill/w_638,h_1253/reyna_valorant_png_by_kaelinshi_ddyjdmr-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjA5OSIsInBhdGgiOiJcL2ZcL2MxMjlhYWI4LTBmZWQtNGQzZS04YzEwLTNmYzQ2N2ZiNjYxYlwvZGR5amRtci1iNDhmYWE1My00NjIwLTRkZTgtYTJmOS03N2YxNjhjYzFlYTYucG5nIiwid2lkdGgiOiI8PTEwNjkifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.NqNB9B0QBBnBYdZOqExX-Rv0bg7FJxoXoCzTcc0b6aQ" alt="">
+      <img src="{{agente.cover}}" alt="">
     </div>
     <div class="funcao-card">
-      <h3>Duelista</h3>
-      <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt213441880cf2cdf5/5eaa06851b51e36d7c1b61d4/Duelist.png" alt="">
+      <h3>{{agente.role}}</h3>
+      <img src="" alt="">
     </div>
     <div class="descricao-card">
-      <p>Criada no coração do México, Reyna domina o combate individual, destacando-se a cada abate
-        efetuado. Sua capacidade só é limitada por sua própria perícia, tornando-a bastante dependente
-        de desempenho.</p>
+      <p>{{agente.description}}</p>
     </div>
   </div>
 </div>
