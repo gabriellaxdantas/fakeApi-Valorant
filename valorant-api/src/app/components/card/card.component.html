@@ -9,7 +9,10 @@
     </div>
     <div class="funcao-card">
       <h3>{{agente.role}}</h3>
-      <img src="" alt="">
+      <img *ngIf="agente.role === 'Controlador'" src="{{imgRoles.Controlador}}" alt="">
+      <img *ngIf="agente.role === 'Duelista'" src="{{imgRoles.Duelista}}" alt="">
+      <img *ngIf="agente.role === 'Sentinela'" src="{{imgRoles.Sentinela}}" alt="">
+      <img *ngIf="agente.role === 'Iniciador'" src="{{imgRoles.Iniciador}}" alt="">
     </div>
     <div class="descricao-card">
       <p>{{agente.description}}</p>
