@@ -1,3 +1,6 @@
 <app-menu></app-menu>
-<app-search-bar></app-search-bar>
-<app-card [agentesValorant]="agentesValorant"></app-card>
+<app-search-bar  (pesquisaRealizada)="filtrarAgentes($event)"></app-search-bar>
+
+<div class="container-card" *ngFor="let agente of agentesFiltrados">
+  <app-card [agente]="agente"></app-card>
+</div>

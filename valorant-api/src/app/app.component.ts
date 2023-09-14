@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { AgentesService } from './services/agentes.service';
 import { IAgente } from './models/agentes/agentes.models';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',

@@ -17,6 +17,9 @@
   padding: 25px;
   border-radius: 30px;
 }
+.title-card{
+  margin-bottom: 10px;
+}
 .title-card > h1{
     color: #F24464;
     font-size: 40px;

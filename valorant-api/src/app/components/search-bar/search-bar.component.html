@@ -1,8 +1,8 @@
 <div class="container-search">
-  <input type="text" class="input-search" placeholder="Pesquisar Agente">
-
-  <button class="button-search" type="submit">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-
+  <form (submit)="pesquisarAgente($event)">
+    <input type="text" class="input-search" placeholder="Pesquisar Agente" [(ngModel)]="termoPesquisa" name="termoPesquisa">
+    <button class="button-search" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
 </div>

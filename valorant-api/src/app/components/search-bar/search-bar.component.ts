@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { IAgente } from '../../models/agentes/agentes.models';
+import { Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,8 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  @Output() pesquisaRealizada = new EventEmitter<string>();
+  termoPesquisa: string = '';
 
+  @Input() agentesValorant: IAgente[] = [];
+  constructor() { }
+  pesquisarAgente(event: Event) {
+    event.preventDefault();
+    this.pesquisaRealizada.emit(this.termoPesquisa);
+  }
   ngOnInit(): void {
   }
 
